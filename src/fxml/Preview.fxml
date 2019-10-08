@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="694.0" prefWidth="1362.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane fx:id="ancPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="636.0" prefWidth="1362.0">
+         <children>
+            <GridPane layoutX="-276.0" layoutY="300.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="616.0" rotate="-90.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="47.0" prefWidth="160.0" style="-fx-background-color: #e7e7e7;" text="FOOD TECHNOLOGY" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="47.0" prefWidth="138.0" style="-fx-background-color: #e7e7e7;" text="DEPARTMENT" GridPane.columnIndex="3">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="47.0" prefWidth="166.0" style="-fx-background-color: #e7e7e7;" text="COMPUTER TECHNOLOGY" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="180.0" style="-fx-background-color: #e7e7e7;" text="HOS PITALITY            ">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="165.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="8.0" prefWidth="153.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="592.0" minWidth="10.0" prefWidth="161.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="592.0" minWidth="10.0" prefWidth="130.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="125.0" minHeight="0.0" prefHeight="109.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+            <TableView fx:id="tableView" layoutX="50.0" layoutY="12.0" prefHeight="616.0" prefWidth="1302.0">
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <columns>
+                  <TableColumn prefWidth="75.0" text="SCHOOL OF TECHNOLOGY">
+                     <columns>
+                        <TableColumn fx:id="level" editable="false" prefWidth="48.0" resizable="false" sortable="false" text="LEVEL" />
+                        <TableColumn prefWidth="186.0" resizable="false" text="DAY 1(SATURDAY)">
+                           <columns>
+                              <TableColumn fx:id="date1" prefWidth="75.0">
+                                 <columns>
+                                    <TableColumn prefWidth="75.0" resizable="false" text="M">
+                                       <columns>
+                                          <TableColumn fx:id="day1M" editable="false" prefWidth="75.0" sortable="false" text="9am-&#10;12pm" />
+                                       </columns>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" resizable="false" text="A">
+                                       <columns>
+                                          <TableColumn fx:id="day1A" editable="false" prefWidth="75.0" sortable="false" text="1pm-&#10;4pm" />
+                                       </columns>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" resizable="false" text="E">
+                                       <columns>
+                                          <TableColumn fx:id="day1E" editable="false" prefWidth="75.0" sortable="false" text="5pm-&#10;7pm" />
+                                       </columns>
+                                    </TableColumn>
+                                 </columns>
+                              </TableColumn>
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="75.0" resizable="false" text="DAY 2(SUNDAY)">
+                           <columns>
+                              <TableColumn fx:id="date2" prefWidth="75.0">
+                                 <columns>
+                                    <TableColumn prefWidth="75.0" resizable="false" text="M">
+                                       <columns>
+                                          <TableColumn fx:id="day2M" editable="false" prefWidth="75.0" sortable="false" text="9am-&#10;12pm" />
+                                       </columns>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" resizable="false" text="A">
+                                       <columns>
+                                          <TableColumn fx:id="day2A" editable="false" prefWidth="75.0" sortable="false" text="1pm-&#10;4pm" />
+                                       </columns>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" resizable="false" text="E">
+                                       <columns>
+                                          <TableColumn fx:id="day2E" editable="false" prefWidth="75.0" sortable="false" text="5pm-&#10;7pm" />
+                                       </columns>
+                                    </TableColumn>
+                                 </columns>
+                              </TableColumn>
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="75.0" resizable="false" text="DAY 3(SATURDAY)">
+                           <columns>
+                              <TableColumn fx:id="date3" prefWidth="75.0">
+                                 <columns>
+                                    <TableColumn prefWidth="75.0" resizable="false" text="M">
+                                       <columns>
+                                          <TableColumn fx:id="day3M" editable="false" prefWidth="75.0" sortable="false" text="9am-&#10;12pm" />
+                                       </columns>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" resizable="false" text="A">
+                                       <columns>
+                                          <TableColumn fx:id="day3A" editable="false" prefWidth="75.0" sortable="false" text="1pm-&#10;4pm" />
+                                       </columns>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" resizable="false" text="E">
+                                       <columns>
+                                          <TableColumn fx:id="day3E" editable="false" prefWidth="75.0" sortable="false" text="5pm-&#10;7pm" />
+                                       </columns>
+                                    </TableColumn>
+                                 </columns>
+                              </TableColumn>
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="75.0" resizable="false" text="DAY 4(SUNDAY)">
+                           <columns>
+                              <TableColumn fx:id="date4" prefWidth="75.0">
+                                 <columns>
+                                    <TableColumn prefWidth="75.0" resizable="false" text="M">
+                                       <columns>
+                                          <TableColumn fx:id="day4M" editable="false" prefWidth="75.0" sortable="false" text="9am-&#10;12pm" />
+                                       </columns>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" resizable="false" text="A">
+                                       <columns>
+                                          <TableColumn fx:id="day4A" editable="false" prefWidth="75.0" sortable="false" text="1pm-&#10;4pm" />
+                                       </columns>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" resizable="false" text="E">
+                                       <columns>
+                                          <TableColumn fx:id="day4E" editable="false" prefWidth="75.0" sortable="false" text="5pm-&#10;7pm" />
+                                       </columns>
+                                    </TableColumn>
+                                 </columns>
+                              </TableColumn>
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="75.0" resizable="false" text="DAY 5(SATURDAY)">
+                           <columns>
+                              <TableColumn fx:id="date5" prefWidth="75.0">
+                                 <columns>
+                                    <TableColumn prefWidth="75.0" resizable="false" text="M">
+                                       <columns>
+                                          <TableColumn fx:id="day5M" editable="false" prefWidth="75.0" sortable="false" text="9am-&#10;12pm" />
+                                       </columns>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" resizable="false" text="A">
+                                       <columns>
+                                          <TableColumn fx:id="day5A" editable="false" prefWidth="75.0" sortable="false" text="1pm-&#10;4pm" />
+                                       </columns>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" resizable="false" text="E">
+                                       <columns>
+                                          <TableColumn fx:id="day5E" editable="false" prefWidth="75.0" sortable="false" text="5pm-&#10;7pm" />
+                                       </columns>
+                                    </TableColumn>
+                                 </columns>
+                              </TableColumn>
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="75.0" resizable="false" text="DAY 6(SUNDAY)">
+                           <columns>
+                              <TableColumn fx:id="date6" prefWidth="75.0">
+                                 <columns>
+                                    <TableColumn prefWidth="75.0" resizable="false" text="M">
+                                       <columns>
+                                          <TableColumn fx:id="day6M" editable="false" prefWidth="75.0" sortable="false" text="9am-&#10;12pm" />
+                                       </columns>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" resizable="false" text="A">
+                                       <columns>
+                                          <TableColumn fx:id="day6A" editable="false" prefWidth="75.0" sortable="false" text="1pm-&#10;4pm" />
+                                       </columns>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" resizable="false" text="E">
+                                       <columns>
+                                          <TableColumn fx:id="day6E" editable="false" prefWidth="75.0" sortable="false" text="5pm-&#10;7pm" />
+                                       </columns>
+                                    </TableColumn>
+                                 </columns>
+                              </TableColumn>
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="75.0" resizable="false" text="DAY 7(SATURDAY)">
+                           <columns>
+                              <TableColumn fx:id="date7" prefWidth="75.0">
+                                 <columns>
+                                    <TableColumn prefWidth="75.0" resizable="false" text="M">
+                                       <columns>
+                                          <TableColumn fx:id="day7M" editable="false" prefWidth="75.0" sortable="false" text="9am-&#10;12pm" />
+                                       </columns>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" resizable="false" text="A">
+                                       <columns>
+                                          <TableColumn fx:id="day7A" editable="false" prefWidth="75.0" sortable="false" text="1pm-&#10;4pm" />
+                                       </columns>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" resizable="false" text="E">
+                                       <columns>
+                                          <TableColumn fx:id="day7E" editable="false" prefWidth="75.0" sortable="false" text="5pm-&#10;7pm" />
+                                       </columns>
+                                    </TableColumn>
+                                 </columns>
+                              </TableColumn>
+                           </columns>
+                        </TableColumn>
+                        <TableColumn prefWidth="75.0" resizable="false" text="DAY 8(SUNDAY)">
+                           <columns>
+                              <TableColumn fx:id="date8" prefWidth="75.0">
+                                 <columns>
+                                    <TableColumn prefWidth="75.0" resizable="false" text="M">
+                                       <columns>
+                                          <TableColumn fx:id="day8M" editable="false" prefWidth="75.0" sortable="false" text="9am-&#10;12pm" />
+                                       </columns>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" resizable="false" text="A">
+                                       <columns>
+                                          <TableColumn fx:id="day8A" editable="false" prefWidth="75.0" sortable="false" text="1pm-&#10;4pm" />
+                                       </columns>
+                                    </TableColumn>
+                                    <TableColumn prefWidth="75.0" resizable="false" text="E">
+                                       <columns>
+                                          <TableColumn fx:id="day8E" editable="false" prefWidth="75.0" sortable="false" text="5pm-&#10;7pm" />
+                                       </columns>
+                                    </TableColumn>
+                                 </columns>
+                              </TableColumn>
+                           </columns>
+                        </TableColumn>
+                     </columns>
+                  </TableColumn>
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <HBox alignment="CENTER" prefHeight="49.0" prefWidth="1362.0" spacing="10.0">
+         <children>
+            <Button fx:id="btnReturn" cancelButton="true" mnemonicParsing="false" prefWidth="100.0" text="RETURN">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnPrint" mnemonicParsing="false" prefWidth="100.0" text="PRINT">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>

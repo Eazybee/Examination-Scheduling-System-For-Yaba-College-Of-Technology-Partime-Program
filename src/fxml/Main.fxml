@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+<?import examinationschedulingsystem.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="435.0" prefWidth="582.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
+   <children>
+      <BorderPane prefHeight="475.0" prefWidth="582.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <MenuBar prefHeight="25.0" prefWidth="550.0" BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem fx:id="mINew" mnemonicParsing="false" text="New Timetable">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
+                    <MenuItem fx:id="mIPrintPreview" mnemonicParsing="false" text="Print Preview">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="P" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <bottom>
+            <Button fx:id="btnCreateTimeTable" contentDisplay="CENTER" disable="true" mnemonicParsing="false" text="Create Time-Table" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="10.0" top="5.0" />
+               </BorderPane.margin>
+               <padding>
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+               </padding>
+            </Button>
+         </bottom>
+         <center>
+            <VBox BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="48.0" prefWidth="582.0" spacing="10.0">
+                     <children>
+                        <ChoiceBox fx:id="choBxSemester1" prefHeight="35.0" prefWidth="171.0" value="Semester">
+                           <items>
+                              <FXCollections fx:factory="observableArrayList">
+                                 <String fx:value="Semester" />
+                                 <String fx:value="1" />
+                                 <String fx:value="2" />
+                              </FXCollections>
+                           </items>
+                        </ChoiceBox>
+                         <ChoiceBox fx:id="choBxDay" disable="true" prefHeight="35.0" prefWidth="194.0" value="Day 1">
+                             <items>
+                              <FXCollections fx:factory="observableArrayList">
+                                 <String fx:value="Day 1" />
+                                 <String fx:value="Day 2" />
+                                 <String fx:value="Day 3" />
+                                 <String fx:value="Day 4" />
+                                 <String fx:value="Day 5" />
+                                 <String fx:value="Day 6" />
+                                 <String fx:value="Day 7" />
+                                 <String fx:value="Day 8" />
+                              </FXCollections>
+                           </items>
+                         </ChoiceBox>
+                        <Date_ fx:id="dtPDate" disable="true" prefHeight="35.0" prefWidth="187.0" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <Separator />
+                  <HBox alignment="CENTER" prefHeight="54.0" prefWidth="582.0" spacing="10.0">
+                     <children>
+                        <ChoiceBox fx:id="choBxDepartment1" disable="true" prefHeight="38.0" prefWidth="326.0" value="Department">
+                           <items>
+                              <FXCollections fx:factory="observableArrayList">
+                                 <String fx:value="Department" />
+                                 <String fx:value="Computer Technology" />
+                                 <String fx:value="Food Technology" />
+                                 <String fx:value="Hospitality" />
+                              </FXCollections>
+                           </items>
+                        </ChoiceBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="259.0" prefWidth="582.0">
+                     <children>
+                        <TabPane fx:id="tPane" disable="true" prefHeight="265.0" prefWidth="463.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
+                           <tabs>
+                              <Tab fx:id="tabM" text="Morning">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox prefHeight="260.0" prefWidth="434.0">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="563.0" spacing="10.0">
+                                                   <children>
+                                                      <Label alignment="CENTER" prefHeight="28.0" prefWidth="58.0" text="ND1 :">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ChoiceBox fx:id="choBx1N1" prefWidth="180.0" />
+                                                      <TextField fx:id="txt1N1" editable="false" promptText="CODE" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="20.0" prefHeight="39.0" prefWidth="563.0" spacing="10.0">
+                                                   <children>
+                                                      <Label alignment="CENTER" prefHeight="28.0" prefWidth="58.0" text="ND2 :">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ChoiceBox fx:id="choBx2N2" prefWidth="180.0" />
+                                                      <TextField fx:id="txt2N2" editable="false" promptText="CODE" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="59.0" prefHeight="39.0" prefWidth="563.0" spacing="10.0">
+                                                   <children>
+                                                      <Label alignment="CENTER" prefHeight="28.0" prefWidth="58.0" text="ND3 :">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ChoiceBox fx:id="choBx3N3" prefWidth="180.0" />
+                                                      <TextField fx:id="txt3N3" editable="false" promptText="CODE" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="98.0" prefHeight="39.0" prefWidth="563.0" spacing="10.0">
+                                                   <children>
+                                                      <Label alignment="CENTER" prefHeight="28.0" prefWidth="58.0" text="HND1 :">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ChoiceBox fx:id="choBx4H1" prefWidth="180.0" />
+                                                      <TextField fx:id="txt4H1" editable="false" promptText="CODE" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="137.0" prefHeight="39.0" prefWidth="563.0" spacing="10.0">
+                                                   <children>
+                                                      <Label alignment="CENTER" prefHeight="28.0" prefWidth="58.0" text=" HND2 :">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ChoiceBox fx:id="choBx5H2" prefWidth="180.0" />
+                                                      <TextField fx:id="txt5H2" editable="false" promptText="CODE" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="176.0" prefHeight="39.0" prefWidth="563.0" spacing="10.0">
+                                                   <children>
+                                                      <Label alignment="CENTER" prefHeight="28.0" prefWidth="58.0" text=" HND3 :">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ChoiceBox fx:id="choBx6H3" prefWidth="180.0" />
+                                                      <TextField fx:id="txt6H3" editable="false" promptText="CODE" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="tabA" text="Afternoon">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox prefHeight="260.0" prefWidth="434.0">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="563.0" spacing="10.0">
+                                                   <children>
+                                                      <Label alignment="CENTER" prefHeight="28.0" prefWidth="58.0" text="ND1 :">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ChoiceBox fx:id="choBx7N1" prefWidth="180.0" />
+                                                      <TextField fx:id="txt7N1" editable="false" promptText="CODE" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="20.0" prefHeight="39.0" prefWidth="563.0" spacing="10.0">
+                                                   <children>
+                                                      <Label alignment="CENTER" prefHeight="28.0" prefWidth="58.0" text="ND2 :">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ChoiceBox fx:id="choBx8N2" prefWidth="180.0" />
+                                                      <TextField fx:id="txt8N2" editable="false" promptText="CODE" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="59.0" prefHeight="39.0" prefWidth="563.0" spacing="10.0">
+                                                   <children>
+                                                      <Label alignment="CENTER" prefHeight="28.0" prefWidth="58.0" text="ND3 :">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ChoiceBox fx:id="choBx9N3" prefWidth="180.0" />
+                                                      <TextField fx:id="txt9N3" editable="false" promptText="CODE" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="98.0" prefHeight="39.0" prefWidth="563.0" spacing="10.0">
+                                                   <children>
+                                                      <Label alignment="CENTER" prefHeight="28.0" prefWidth="58.0" text="HND1 :">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ChoiceBox fx:id="choBx10H1" prefWidth="180.0" />
+                                                      <TextField fx:id="txt10H1" editable="false" promptText="CODE" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="137.0" prefHeight="39.0" prefWidth="563.0" spacing="10.0">
+                                                   <children>
+                                                      <Label alignment="CENTER" prefHeight="28.0" prefWidth="58.0" text=" HND2 :">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ChoiceBox fx:id="choBx11H2" prefWidth="180.0" />
+                                                      <TextField fx:id="txt11H2" editable="false" promptText="CODE" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="176.0" prefHeight="39.0" prefWidth="563.0" spacing="10.0">
+                                                   <children>
+                                                      <Label alignment="CENTER" prefHeight="28.0" prefWidth="58.0" text=" HND3 :">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ChoiceBox fx:id="choBx12H3" prefWidth="180.0" />
+                                                      <TextField fx:id="txt12H3" editable="false" promptText="CODE" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="tabE" text="Evening">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox prefHeight="260.0" prefWidth="434.0">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="563.0" spacing="10.0">
+                                                   <children>
+                                                      <Label alignment="CENTER" prefHeight="28.0" prefWidth="58.0" text="ND1 :">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ChoiceBox fx:id="choBx13N1" prefHeight="25.0" prefWidth="180.0" />
+                                                      <TextField fx:id="txt13N1" editable="false" promptText="CODE" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="20.0" prefHeight="39.0" prefWidth="563.0" spacing="10.0">
+                                                   <children>
+                                                      <Label alignment="CENTER" prefHeight="28.0" prefWidth="58.0" text="ND2 :">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ChoiceBox fx:id="choBx14N2" prefWidth="180.0" />
+                                                      <TextField fx:id="txt14N2" editable="false" promptText="CODE" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="59.0" prefHeight="39.0" prefWidth="563.0" spacing="10.0">
+                                                   <children>
+                                                      <Label alignment="CENTER" prefHeight="28.0" prefWidth="58.0" text="ND3 :">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ChoiceBox fx:id="choBx15N3" prefWidth="180.0" />
+                                                      <TextField fx:id="txt15N3" editable="false" promptText="CODE" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="98.0" prefHeight="39.0" prefWidth="563.0" spacing="10.0">
+                                                   <children>
+                                                      <Label alignment="CENTER" prefHeight="28.0" prefWidth="58.0" text="HND1 :">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ChoiceBox fx:id="choBx16H1" prefWidth="180.0" />
+                                                      <TextField fx:id="txt16H1" editable="false" promptText="CODE" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="137.0" prefHeight="39.0" prefWidth="563.0" spacing="10.0">
+                                                   <children>
+                                                      <Label alignment="CENTER" prefHeight="28.0" prefWidth="58.0" text=" HND2 :">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ChoiceBox fx:id="choBx17H2" prefWidth="180.0" />
+                                                      <TextField fx:id="txt17H2" editable="false" promptText="CODE" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="176.0" prefHeight="39.0" prefWidth="300.0" spacing="10.0">
+                                                   <children>
+                                                      <Label alignment="CENTER" prefHeight="28.0" prefWidth="58.0" text=" HND3 :">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ChoiceBox fx:id="choBx18H3" prefWidth="180.0" />
+                                                      <TextField fx:id="txt18H3" editable="false" promptText="CODE" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                           </tabs>
+                        </TabPane>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
